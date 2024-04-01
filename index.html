@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./nginx.png" >
+  <title>Claro Cobranza</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script  >
+</head>
+<body>
+  <header>
+    <navbar class="navbar navbar-expand-lg bg-secondary" data-bs-theme="dark">
+      <div class="container">
+        <button type="button" class="btn" onclick="switchClaro()">
+          <a href="/">
+            <img src="./header_claro.png" height="100%" class="rounded float-start" />
+          </a>
+        </button>
+        <button type="button" class="btn bg-success" >
+          <a href="/">Link local</a>
+        </button>
+      </div>
+    </navbar>
+  </header>
+  <table class="table" >
+    <thead>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+    </thead>
+    <tbody class="table-hover">
+      <tr class="trStyle">
+        <td colspan="3">
+          <h2><p style="color: red;">Local</p></h2>
+        </td>
+      </tr>
+      <tr class="trStyle" >
+        <td align="center">
+          <b>
+            <div style="padding-top: 10px; padding-left: 10px;">
+              <a target="_blank" href="http://localhost:8080/swagger-ui/index.html">BackEnd Local</a>
+            </div>
+          </b>
+        </td>
+        <td colspan="2" align="right">
+          <b>
+            <div style="padding-top: 10px; padding-left: 10px;">
+              <a target="_blank" href="http://localhost:7099/">Micro-Frontend Local (No funciona todavia)</a>
+            </div>
+          </b>
+        </td>
+      </tr>
+      <tr class="trStyle">
+        <td colspan="3">
+          <h2><p style="color: red;">Desa</p></h2>
+        </td>
+      </tr>
+      <tr class="trStyle">
+        <td align="center">
+          <b class="titulo" style="text-align: center;">Argentina</b>
+          <b>
+            <div style="padding-top: 10px; padding-left: 10px;">
+              <a target="_blank" href="https://cob-parameters-mora-service-payment-interfaces-ar-desa.apps.osen02.claro.amx/swagger-ui/index.html#">
+                BackEnd Local
+              </a>
+            </div>
+          </b>
+        </td>
+        <td align="center">
+          <b class="titulo" >Uruguay</b>
+          <b>
+            <div style="padding-top: 10px; padding-left: 10px;">
+              <a target="_blank" href="https://cob-parameters-mora-service-payment-interfaces-uy-desa.apps.osen02.claro.amx/swagger-ui/index.html#">BackEnd Local</a>
+            </div>
+          </b>
+        </td>
+        <td align="center">
+          <b class="titulo">Paraguay</b>
+          <b>
+            <div style="padding-top: 10px; padding-left: 10px; ">
+              <a target="_blank" href="https://cob-parameters-mora-service-payment-interfaces-py-desa.apps.osen02.claro.amx/swagger-ui/index.html#">BackEnd Local</a>
+            </div>
+          </b>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <h2><p style="color: red;">Test</p></h2>
+        </td>
+      </tr>
+      <tr id="test">
+        <td align="center">
+          <b class="titulo" style="text-align: center;">Argentina</b>
+          <b>
+            <div style="padding-top: 10px; padding-left: 10px;">
+              <a target="_blank" href="https://cob-parameters-mora-service-payment-interfaces-ar.apps.osen02.claro.amx/swagger-ui/index.html#">
+                BackEnd Local
+              </a>
+            </div>
+          </b>
+        </td>
+        <td align="center">
+          <b class="titulo" style="text-align: center;" >Ambiente Openshift UY TEST</b>
+          <b>
+            <div style="padding-top: 10px; padding-left: 10px;">
+              <a target="_blank" href="https://cob-parameters-mora-service-payment-interfaces-uy.apps.osen02.claro.amx/swagger-ui/index.html#">BackEnd Local</a>
+            </div>
+          </b>
+        </td>
+        <td align="center">
+          <b class="titulo" >Paraguay</b>
+          <b>
+            <div style="padding-top: 10px; padding-left: 10px; ">
+              <a target="_blank" href="https://cob-parameters-mora-service-payment-interfaces-py.apps.osen02.claro.amx/swagger-ui/index.html#">BackEnd Local</a>
+            </div>
+          </b>
+        </td>
+      </tr>
+      <tr id="frontend">
+        <td colspan="3" align="center">
+          <b style="text-align: center;">Frontend Unico (AUP)</b>
+          <b>
+            <div style="padding-top: 10px; padding-left: 10px;">
+              <a target="_blank" href="https://cob-host-mf-payment-interfaces-ar-desa.apps.osen02.claro.amx/">Micro-Frontend Unico</a> 
+            </div>
+          </b>
+        </td>
+      </tr>
+      <tr id="frontend">
+        <td colspan="3" align="center">
+          <b style="text-align: center;">Frontend Unico (AUP)</b>
+          <b>
+            <div style="padding-top: 10px; padding-left: 10px;">
+              <a target="_blank" href="https://desa-gestiondedeuda.claro.amx/">Micro-Frontend Unico</a> 
+            </div>
+          </b>
+        </td>
+      </tr>
+   </tbody>
+  </table>
+  <footer>
+    Creado por un chanta
+  </footer>
+</body>
+</html>
