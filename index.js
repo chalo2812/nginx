@@ -1,6 +1,6 @@
 function switchClaro(){
   console.error("pepe Claro");
-  setTimeout(100,undefined,[]);
+  setTimeout(100);
 }
 
 function switchLocal() {
