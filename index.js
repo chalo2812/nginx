@@ -1,9 +1,7 @@
-function switchClaro(){
-  console.error("pepe Claro");
+function switchSystech(){
   setTimeout(100);
 }
 
 function switchLocal() {
-  console.log("pepe Local");
   setTimeout(100);
 }
